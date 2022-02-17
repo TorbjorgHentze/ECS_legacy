@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace ECS.Legacy
+namespace ECS_v2
 {
     class FakeHeater : IRegulate
     {

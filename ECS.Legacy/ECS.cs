@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ECS.Legacy
+namespace ECS_v2
 {
     public class ECS
     {
@@ -43,9 +43,6 @@ namespace ECS.Legacy
             return _tempSensor.GetTemp();
         }
 
-        //public bool RunSelfTest()
-        //{
-        //    return _tempSensor.RunSelfTest() && _heater.RunSelfTest();
-        //}
+        
     }
 }
