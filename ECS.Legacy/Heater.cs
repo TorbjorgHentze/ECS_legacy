@@ -1,4 +1,6 @@
-﻿namespace ECS.Legacy
+﻿using ECS.Legacy;
+
+namespace ECS_v2
 {
     public class Heater : IRegulate
     {

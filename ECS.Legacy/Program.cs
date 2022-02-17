@@ -1,6 +1,7 @@
 ﻿using System;
+using ECS_v2;
 
-namespace ECS.Legacy
+namespace ECS_v2
 {
     class Program
     {

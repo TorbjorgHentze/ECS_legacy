@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ECS.Legacy
+namespace ECS_v2
 {
-    internal class TempSensor : ISensor
+     public class TempSensor : ISensor
     {
         private Random gen = new Random();
 
@@ -10,10 +10,6 @@ namespace ECS.Legacy
         {
             return gen.Next(-5, 45);
         }
-
-        //public bool RunSelfTest()
-        //{
-        //    return true;
-        //}
+        
     }
 }
