@@ -1,6 +1,10 @@
-﻿namespace ECS.Legacy
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ECS.Legacy
 {
-    public class Heater : IRegulate
+    class FakeHeater : IRegulate
     {
         public void TurnOn()
         {

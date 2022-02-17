@@ -1,20 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace ECS.Legacy
 {
     public class ECS
     {
         private int _threshold;
-        private readonly ISensor _tempSensor;
-        private readonly IRegulate _heater;
+        private readonly TempSensor _tempSensor;
+        private readonly Heater _heater;
 
-        
 
-        public ECS(int thr, ISensor tempSensor,IRegulate heater)
+
+        public ECS(int thr)
         {
             SetThreshold(thr);
-            _tempSensor = tempSensor;
-            _heater = heater;
+            _tempSensor = new TempSensor();
+            _heater = new Heater();
         }
 
         public void Regulate()
@@ -43,9 +45,9 @@ namespace ECS.Legacy
             return _tempSensor.GetTemp();
         }
 
-        //public bool RunSelfTest()
-        //{
-        //    return _tempSensor.RunSelfTest() && _heater.RunSelfTest();
-        //}
+        public bool RunSelfTest()
+        {
+            return _tempSensor.RunSelfTest() && _heater.RunSelfTest();
+        }
     }
 }
