@@ -5,22 +5,22 @@ namespace ECS_v2
     public class ECS
     {
         private int _threshold;
-        private readonly ISensor _tempSensor;
+        private readonly ISensor _Sensor;
         private readonly IRegulate _heater;
 
         
 
-        public ECS(int thr, ISensor tempSensor,IRegulate heater)
+        public ECS(int thr, ISensor Sensor,IRegulate heater)
         {
             SetThreshold(thr);
-            _tempSensor = tempSensor;
-            _heater = heater;
+            this._Sensor = Sensor;
+            this._heater = heater;
         }
 
         public void Regulate()
         {
-            var t = _tempSensor.GetTemp();
-            Console.WriteLine($"Temperatur measured was {t}");
+            var t = _Sensor.GetTemp();
+            Console.WriteLine($"Temperature measured was {t}");
             if (t < _threshold)
                 _heater.TurnOn();
             else
@@ -40,7 +40,7 @@ namespace ECS_v2
 
         public int GetCurTemp()
         {
-            return _tempSensor.GetTemp();
+            return _Sensor.GetTemp();
         }
 
         

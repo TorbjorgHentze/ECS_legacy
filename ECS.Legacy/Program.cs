@@ -7,7 +7,7 @@ namespace ECS_v2
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Testing ECS.Legacy");
+            Console.WriteLine("Testing ECS_v2");
             
             // Make an ECS with a threshold of 23
             var control = new ECS(23,new TempSensor(),new Heater());
