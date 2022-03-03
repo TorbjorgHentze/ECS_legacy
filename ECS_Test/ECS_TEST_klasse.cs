@@ -65,6 +65,17 @@ namespace ECS_Test
 
         }
 
+        [TestCase(21)]
+        [TestCase(0)]
+        [TestCase(-2)]
+        public void TestSetThreshold(int thr)
+        {
+            uut.SetThreshold(thr);
+
+            Assert.That(uut.GetThreshold(), Is.EqualTo(thr));
+
+        }
+
 
 
         public class FakeSensor : ISensor
