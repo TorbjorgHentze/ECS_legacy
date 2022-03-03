@@ -76,6 +76,17 @@ namespace ECS_Test
 
         }
 
+        [TestCase(21)]
+        [TestCase(0)]
+        [TestCase(-2)]
+        public void TestGetCurTemp(int temp)
+        {
+            uut.GetCurTemp().Returns(temp);
+
+            Assert.That(sensor.GetTemp(), Is.EqualTo(temp));
+
+        }
+
 
 
         public class FakeSensor : ISensor

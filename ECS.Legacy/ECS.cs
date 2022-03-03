@@ -19,7 +19,7 @@ namespace ECS_v2
 
         public void Regulate()
         {
-            var t = _Sensor.GetTemp();
+            var t = GetCurTemp();
             Console.WriteLine($"Temperature measured was {t}");
             if (t < _threshold)
                 _heater.TurnOn();
